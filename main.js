@@ -7,7 +7,7 @@ const session = require("express-session");
 const Console = require("console");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // //database connect
 mongoose.connect(process.env.DB_URI,{});

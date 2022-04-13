@@ -25,12 +25,14 @@ var upload = multer({
 
 
 router.post("/add",upload,(req,res)=>{
+  console.log(req.file)
   const user = new User({
     name:req.body.name,
     email:req.body.email,
     phone:req.body.phone,
     image:req.file.filename,
   });
+
 
   user.save((err)=>{
     if (err){
